@@ -144,4 +144,199 @@ return result;
 console.log(validarnumero(0));
 console.log(validarnumero(-11));
 console.log(validarnumero(4));
+/*
+11-
+Ejercicio de map:
+Dado un arreglo de palabras, utiliza el método map 
+para crear un nuevo arreglo que contenga la longitud 
+de cada palabra.
+*/
+let box = ["dado", "un", "arreglo", "de", "palabras"];
+let arr2 = box.map(n => n.length);
+ console.log(arr2);
+/*
+12-
+Ejercicio de filter:
+Dado un arreglo de números, utiliza el método filter 
+para crear un nuevo arreglo que contenga solo 
+los números mayores que 5
+*/ 
+let num1 = [2,6,10,1,3,12];
+let nums2 = num1.filter(n => n>5);
+console.log(nums2);
+/*
+13-
+Ejercicio de reduce:
+Dado un arreglo de números, utiliza el método reduce 
+para calcular el producto de todos los elementos 
+del arreglo.
+*/
+let num2 = [2,3,4,5];
+let total = num2.reduce((x,y) => (x*y));
+console.log(total);
+/*
+14-
+Ejercicio combinado:
+Dado un arreglo de objetos que representan estudiantes, 
+utiliza el método filter para crear un nuevo arreglo 
+que contenga solo los estudiantes que tienen una 
+calificación mayor o igual a 80. Luego, utiliza 
+el método map para crear un nuevo arreglo que contenga 
+solo los nombres de esos estudiantes. 
+*/
+let estudiantes = [
+    {
+        nombre: "peach",
+        calificación: 96,
+    },
+    {
+        nombre: "mario",
+        calificación: 70,
+    },
+    {
+        nombre: "bowser",
+        calificación: 50,
+    },
+    {
+        nombre: "luigi",
+        calificación: 88,
+    },
+]
 
+let noJalados = estudiantes.filter(elemento_estudiante => elemento_estudiante.calificación>80)
+let promo2023 = noJalados.map(elemento_estudiante => elemento_estudiante.nombre);
+console.log(promo2023)
+/*
+15-
+Ejercicio combinado:
+Dado un arreglo de palabras, utiliza el método 
+filter para crear un nuevo arreglo que contenga 
+solo las palabras que contienen la letra "a". Luego, 
+utiliza el método map para convertir cada palabra 
+en minúsculas. 
+*/
+let arr = ["DADO", "UN", "ARREGLO", "DE", "PALABRAS"];
+let contieneA = arr.filter(elemento => elemento.includes("A"))
+let contieneA_min= contieneA.map(elemento => elemento.toLowerCase())
+console.log(contieneA_min);
+/*
+16-
+ Ejercicio combinado:
+Dado un arreglo de objetos que representan libros, 
+utiliza el método `filter` para crear un nuevo arreglo 
+que contenga solo los libros cuyo autor sea 
+"J.K. Rowling". Luego, utiliza el método `reduce` 
+para calcular la suma de las páginas de todos 
+los libros seleccionados.
+*/
+let libros = [
+    {
+        libro: "harry potter 1",
+        autor: "J.K. Rowling",
+        paginas: 10000
+    },
+    {
+        libro: "harry potter 2",
+        autor: "J.K. Rowling",
+        paginas: 800
+    },
+    {
+        libro: "sample",
+        autor: "John Doe",
+        paginas: 50
+    },
+    {
+        libro: "sample book",
+        autor: "Jane Doe",
+        paginas: 200
+    }
+]
+
+let librosDeRowling = libros.filter(elemento_libro => elemento_libro.autor === "J.K. Rowling");
+console.log(librosDeRowling)
+let paginasDeRowling = librosDeRowling.reduce((cantidad,paginaslibroRowling) => (cantidad+paginaslibroRowling.paginas),0);
+console.log(paginasDeRowling)
+/*
+17-
+Ejercicio de bucles:
+Escribe un bucle que imprima los números pares 
+del 1 al 20 en la consola.
+*/
+
+/*
+18-
+Ejercicio de condicionales:
+Escribe una función que tome una cadena como 
+argumento y devuelva "Es una frase" si la cadena 
+contiene espacios en blanco, y "Es una palabra" 
+si la cadena no contiene espacios en blanco.
+*/
+
+/*
+19-
+Ejercicio de map:
+Dado un arreglo de nombres, utiliza el método `map` 
+para crear un nuevo arreglo que contenga solo 
+los nombres en mayúsculas.
+*/
+
+
+/*
+20-
+Ejercicio de filter:
+Dado un arreglo de números, utiliza el método `filter` 
+para crear un nuevo arreglo que contenga solo 
+los números impares.
+*/
+
+/*
+21-
+Ejercicio de reduce:
+Dado un arreglo de palabras, utiliza el método `reduce` 
+para calcular la cantidad total de caracteres de todas 
+las palabras en el arreglo.
+*/
+
+/*
+22-
+Ejercicio combinado:
+Dado un arreglo de objetos que representan productos, 
+utiliza el método `filter` para crear un nuevo arreglo 
+que contenga solo los productos cuyo precio sea mayor 
+a $50. Luego, utiliza el método `map` para crear un
+nuevo arreglo que contenga solo los nombres de esos 
+productos.
+*/
+
+
+/*
+23-
+Ejercicio combinado:
+Dado un arreglo de números, utiliza el método `filter` 
+para crear un nuevo arreglo que contenga solo 
+los números que sean múltiplos de 3. Luego, utiliza 
+el método `reduce` para calcular la suma de los números 
+seleccionados.
+*/
+
+
+/*
+24-
+Ejercicio combinado:
+Dado un arreglo de objetos que representan estudiantes, 
+utiliza el método `filter` para crear un nuevo arreglo 
+que contenga solo los estudiantes que tienen una 
+calificación promedio mayor o igual a 90. Luego, 
+utiliza el método `reduce` para calcular el promedio 
+de las calificaciones de los estudiantes seleccionados.
+*/
+
+
+/*
+25-
+Ejercicio de bucles:
+Escribe un bucle que imprima la serie de Fibonacci 
+hasta el décimo término. (La serie de Fibonacci 
+comienza con 0 y 1, y cada término siguiente es la suma 
+de los dos anteriores).
+*/
