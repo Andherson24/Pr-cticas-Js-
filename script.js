@@ -262,7 +262,11 @@ Ejercicio de bucles:
 Escribe un bucle que imprima los números pares 
 del 1 al 20 en la consola.
 */
-
+for(let n=0; n<=20; n++){
+    if(n%2===0){
+        console.log(n);
+    }
+}
 /*
 18-
 Ejercicio de condicionales:
@@ -279,8 +283,14 @@ Dado un arreglo de nombres, utiliza el método `map`
 para crear un nuevo arreglo que contenga solo 
 los nombres en mayúsculas.
 */
-
-
+let name2 = ["MARIO", "peach", "BOWSER", "luigi"];
+let Mayusculas = name2.map(elemento_nombre => {
+    let enMayusculas = elemento_nombre.toUpperCase()  
+    if(elemento_nombre === enMayusculas){
+        return elemento_nombre;
+    }
+});
+console.log(Mayusculas);
 /*
 20-
 Ejercicio de filter:
@@ -288,7 +298,9 @@ Dado un arreglo de números, utiliza el método `filter`
 para crear un nuevo arreglo que contenga solo 
 los números impares.
 */
-
+let num3 = [44,2,5,6,1,33,19];
+let impares = num3.filter(num_elemento => (num_elemento%2 !== 0));
+console.log(impares);
 /*
 21-
 Ejercicio de reduce:
@@ -296,7 +308,9 @@ Dado un arreglo de palabras, utiliza el método `reduce`
 para calcular la cantidad total de caracteres de todas 
 las palabras en el arreglo.
 */
-
+let aplicar = ["ejercicio", "de", "reduce"];
+let calcular1 = aplicar.reduce((sumado,caracteres) => (sumado + caracteres.length),0)
+console.log(calcular1);
 /*
 22-
 Ejercicio combinado:
