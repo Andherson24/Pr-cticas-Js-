@@ -321,8 +321,22 @@ a $50. Luego, utiliza el método `map` para crear un
 nuevo arreglo que contenga solo los nombres de esos 
 productos.
 */
+let vitrina = [ 
+    { name3: "teclado",
+        price1: 20,
+    },
+    {name3: "monitor",
+        price1: 200,
+    },
+    {name3: "lampara",
+        price1: 50,
+    }
+]
 
-
+let precio1 = vitrina.filter( x => x.price1 > 50 );
+console.log(precio1);
+let howis = precio1.map( x => x.name3);
+console.log(howis);
 /*
 23-
 Ejercicio combinado:
@@ -344,8 +358,28 @@ calificación promedio mayor o igual a 90. Luego,
 utiliza el método `reduce` para calcular el promedio 
 de las calificaciones de los estudiantes seleccionados.
 */
+let alumn = [ 
+    {student: "victor",
+        nota: 20,
+    },
+    {student: "monago",
+        nota: 50,
+    },
+    {student: "lara",
+        nota: 90,
+    },
+    {student: "mariana",
+        nota: 120,
+    },
+    {student: "josue",
+        nota: 80,
+    }
+]
 
-
+let calificacion1 = alumn.filter( x => x.nota >= 90 );
+console.log(calificacion1);
+let promedio2 = calificacion1.reduce( (n,e) => (n += e.nota),0);
+console.log(promedio2);
 /*
 25-
 Ejercicio de bucles:
@@ -354,3 +388,14 @@ hasta el décimo término. (La serie de Fibonacci
 comienza con 0 y 1, y cada término siguiente es la suma 
 de los dos anteriores).
 */
+let num5 = 0;
+let num4 = 1;
+let n = 0;
+
+for (let i = 2; i <= 10; i++) {
+    console.log(num1)
+    n = num2 + num1;
+    num1 = num2;
+    num2 = n;
+}
+
