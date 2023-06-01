@@ -480,3 +480,74 @@ let emp5k = empleados.filter(x => {
 
 let emp5knom = emp5k.map(x => x.nombre);
 console.log(emp5knom)
+/*31. Ejercicio combinado:
+Dado un arreglo de números, utiliza el método `filter` para crear un nuevo arreglo 
+que contenga solo los números que sean divisibles por 5 y mayores a 10. Luego, 
+utiliza el método `reduce` para calcular la suma de los números seleccionados.
+*/
+let num31 = [44, 18, 5, 6, 10, 50, 9]
+let numdiv5 = num31.filter(x => {
+    if (x % 5 === 0) {
+        return x
+    }
+})
+let numdiv5sum = numdiv5.reduce((x, y) => (x + y), 0)
+console.log(numdiv5sum)
+/*32. Ejercicio combinado:
+Dado un arreglo de objetos que representan productos, utiliza el método `filter` para 
+crear un nuevo arreglo que contenga solo los productos en stock con un precio menor a $100. 
+Luego, utiliza el método `reduce` para calcular el precio total de los productos seleccionados.
+*/
+let productos32 = [
+    {
+        producto: "iphone",
+        price: 15.00,
+        stock: true
+    },
+    {
+        producto: "xbox",
+        price: 400.00,
+        stock: true
+    },
+    {
+        producto: "ipad",
+        price: 20.00,
+        stock: true
+    },
+    {
+        producto: "apple watch",
+        price: 200.00,
+        stock: false
+    },
+]
+
+let stock32 = productos32.filter(producto => {
+    if ((producto.stock === true) && (producto.price < 100)) {
+        return producto;
+    }
+});
+
+let stock32reduced = stock32.reduce((x, y) => (x + y.price), 0)
+/*33. Ejercicio de bucles:
+Escribe un bucle que imprima los números impares del 1 al 50 en la consola.
+*/
+for (let n = 0; n <= 50; n++) {
+    if (!(n % 2 === 0)) {
+        console.log(n);
+    }
+}
+/*34. Ejercicio de condicionales:
+Escribe una función que tome dos números como argumentos y devuelva el mayor de los dos.
+*/
+function mayorDe2(x, y) {
+    if (x > y) { return x }
+    else return y;
+}
+console.log(mayorDe2(3, 1))
+/*35. Ejercicio de map:
+Dado un arreglo de palabras, utiliza el método `map` para crear un nuevo arreglo que contenga
+ la primera letra de cada palabra.
+*/
+let arr35 = ["DADO", "UN", "ARREGLO", "DE", "PALABRAS"];
+let primerL = arr35.map(x => x[0])
+console.log(primerL)
