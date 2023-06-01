@@ -551,3 +551,99 @@ Dado un arreglo de palabras, utiliza el método `map` para crear un nuevo arregl
 let arr35 = ["DADO", "UN", "ARREGLO", "DE", "PALABRAS"];
 let primerL = arr35.map(x => x[0])
 console.log(primerL)
+/*36. Ejercicio de filter:
+Dado un arreglo de números, utiliza el método `filter` para crear un nuevo arreglo que 
+contenga solo los números divisibles por 3.
+*/
+let arr36 = [44, 18, 5, 6, 10, 50, 9]
+let numdiv3 = arr36.filter(x => {
+    if (x % 3 === 0) {
+        return x
+    }
+})
+console.log(numdiv3)
+/*37. Ejercicio de reduce:
+Dado un arreglo de palabras, utiliza el método `reduce` para concatenar todas las palabras 
+en una sola cadena.
+*/
+let arr37 = ["DADO", "UN", "ARREGLO", "DE", "PALABRAS"];
+let arr37juntos = arr37.reduce((x, y) => (x + y))
+console.log(arr37juntos);
+
+/*38. Ejercicio combinado:
+Dado un arreglo de objetos que representan estudiantes, utiliza el método `filter` para crear 
+un nuevo arreglo que contenga solo los estudiantes que tienen una calificación mayor a 90. 
+Luego, utiliza el método `map` para crear un nuevo arreglo que contenga solo los nombres y calificaciones de esos estudiantes.
+*/
+let estudiantes = [
+    {
+        nombre: "peach",
+        calificacion: 96,
+        estado: "pass"
+    },
+    {
+        nombre: "mario",
+        calificacion: 91,
+        estado: "pass"
+
+    },
+    {
+        nombre: "bowser",
+        calificacion: 50,
+        estado: "fail"
+
+    },
+    {
+        nombre: "luigi",
+        calificacion: 99,
+        estado: "pass"
+
+    },
+]
+let noJalados = estudiantes.filter(elemento_estudiante => elemento_estudiante.calificacion >= 90)
+let mapNoJalados = noJalados.map(x => [x.calificacion, x.nombre])
+console.log(mapNoJalados)
+
+/*39. Ejercicio combinado:
+Dado un arreglo de números, utiliza el método `filter` para crear un nuevo arreglo que 
+contenga solo los números positivos. Luego, utiliza el método `reduce` para calcular la suma
+ de los números seleccionados.
+*/
+let arr39 = [44, 18, -5, 6, 10, -50, -9]
+let pos39 = arr39.filter(x => {
+    if (x > 0) {
+        return x
+    }
+})
+let suma39 = pos39.reduce((x, y) => (x + y), 0)
+console.log(suma39)
+/*40. Ejercicio combinado:
+Dado un arreglo de objetos que representan productos, utiliza el método `filter` para
+ crear un nuevo arreglo que contenga solo los productos con un precio mayor a $50. Luego, 
+ utiliza el método `reduce` para calcular el promedio de los precios de los productos 
+ seleccionados.
+ */
+ let productos40 = [
+    {
+        producto: "iphone",
+        price: 15.00,
+        stock: true
+    },
+    {
+        producto: "xbox",
+        price: 400.00,
+        stock: true
+    },
+    {
+        producto: "ipad",
+        price: 20.00,
+        stock: true
+    },
+    {
+        producto: "apple watch",
+        price: 200.00,
+        stock: false
+    },
+]
+let stock40 = productos32.filter(producto => producto.price > 50);
+let reduce40 = stock40.reduce((total, y) => (total + y.price), 0) / stock40.length;
