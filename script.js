@@ -388,7 +388,7 @@ Escribe un bucle que imprima la serie de Fibonacci
 hasta el décimo término. (La serie de Fibonacci 
 comienza con 0 y 1, y cada término siguiente es la suma 
 de los dos anteriores).
-*/
+*//*
 let num1 = 0;
 let num2 = 1;
 let n = 0;
@@ -407,12 +407,12 @@ Escribe una función que tome una cadena como argumento
 y devuelva "Es un palíndromo" si la cadena es igual 
 al revés, y "No es un palíndromo" si no lo es.
 */
-function esPalindrome(cadena) {
+function esPalindrome(cadena1) {
 
-    let largo = cadena.length;
+    let largo = cadena1.length;
 
     for (let i = 0; i < largo / 2; i++) {
-        if (cadena[i] !== cadena[largo - 1 - i]) {
+        if (cadena1[i] !== cadena1[largo - 1 - i]) {
             return 'No es un palíndromo';
         }
     }
@@ -577,31 +577,31 @@ Luego, utiliza el método `map` para crear un nuevo arreglo que contenga solo lo
 */
 let estudiantes = [
     {
-        nombre: "peach",
+        nombre2: "peach",
         calificacion: 96,
         estado: "pass"
     },
     {
-        nombre: "mario",
+        nombre2: "mario",
         calificacion: 91,
         estado: "pass"
 
     },
     {
-        nombre: "bowser",
+        nombre2: "bowser",
         calificacion: 50,
         estado: "fail"
 
     },
     {
-        nombre: "luigi",
+        nombre2: "luigi",
         calificacion: 99,
         estado: "pass"
 
     },
 ]
 let noJalados = estudiantes.filter(elemento_estudiante => elemento_estudiante.calificacion >= 90)
-let mapNoJalados = noJalados.map(x => [x.calificacion, x.nombre])
+let mapNoJalados = noJalados.map(x => [x.calificacion, x.nombre2])
 console.log(mapNoJalados)
 
 /*39. Ejercicio combinado:
@@ -647,3 +647,75 @@ Dado un arreglo de objetos que representan productos, utiliza el método `filter
 ]
 let stock40 = productos32.filter(producto => producto.price > 50);
 let reduce40 = stock40.reduce((total, y) => (total + y.price), 0) / stock40.length;
+/*41. Ejercicio de funciones:
+Crea una función llamada `saludar` que tome un nombre como argumento y devuelva un mensaje 
+de saludo, por ejemplo: "¡Hola, [nombre]!"
+*/
+function saludar(nombre4) {
+    return `!Hola, ${nombre4}!`
+}
+/*42. Ejercicio de funciones flecha:
+Convierte la función `saludar` en una función flecha.
+*/
+let saludar1 = (nombre1) => `!Hola, ${nombre1} !`;
+/*43. Ejercicio de funciones anónimas:
+Crea una función anónima que tome dos números como argumentos y devuelva su suma.
+*/
+let suma43 = function (x, y) {
+    return x + y
+};
+/*44. Ejercicio de funciones:
+Crea una función llamada `calcularPromedio` que tome un arreglo de números como 
+argumento y devuelva el promedio de esos números.
+*/
+function calcularPromedio(arr) {
+    return arr.reduce((x, y) => (x + y), 0) / arr.length;
+}
+/*45. Ejercicio de funciones flecha:
+Convierte la función `calcularPromedio` en una función flecha.
+*/
+let promedio = (arreglo) => (arreglo.reduce((x, y) => (x + y), 0) / arreglo.length);
+/*46. Ejercicio de funciones anónimas:
+Crea una función anónima que tome un arreglo de palabras como argumento y devuelva un nuevo
+ arreglo con la longitud de cada palabra.
+*/
+let longitud = function (arr) {
+    return arr.map(palabra => palabra.length)
+}
+/*47. Ejercicio de funciones:
+Crea una función llamada `esPar` que tome un número como argumento y devuelva `true` si el 
+número es par, y `false` si no lo es.
+*/
+function esPar(numero3) {
+    let resultado1;
+    if (numero3 % 2 === 0) {
+        resultado1 = true
+    }
+    else
+        resultado1 = false
+
+    return resultado1;
+}
+/*48. Ejercicio de funciones flecha:
+Convierte la función `esPar` en una función flecha.
+*/
+let esPar1 = (numero) => {
+    if (numero % 2 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+/*49. Ejercicio de funciones anónimas:
+Crea una función anónima que tome un arreglo de números como argumento y devuelva un nuevo 
+arreglo con solo los números pares.
+*/
+let numsPares = function (numeros) {
+    return numeros.filter(num1 => { if (num1 % 2 === 0) return num })
+}
+/*50. Ejercicio de funciones:
+Crea una función llamada `convertirAMayusculas` que tome una cadena como argumento y devuelva la cadena en mayúsculas.
+*/
+function convertirAMayusculas(cadena) {
+    return cadena.toUpperCase();
+}
